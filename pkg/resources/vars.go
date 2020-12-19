@@ -37,8 +37,8 @@ const (
 	// https://data.ibb.gov.tr/en/dataset/ilce-yil-ve-atik-turu-bazinda-atik-miktari
 	WasteAmounts = "50036dfd-aea5-4f06-832f-f7020fdaaa5a"
 
-	// MunicipalityPopulation contains the data about the population
-	// based on municipality's in Istanbul
+	// MunicipalityPopulation2019 contains the data about the population
+	// based on municipality's on Istanbul in 2019
 	// https://data.ibb.gov.tr/en/dataset/belediye-nufuslari-veri-seti
-	MunicipalityPopulation = "c6c9b289-2824-41b3-ab3d-4fd655ed4e24"
+	MunicipalityPopulation2019 = "c6c9b289-2824-41b3-ab3d-4fd655ed4e24"
 )

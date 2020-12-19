@@ -42,32 +42,44 @@ type ParkingLots struct {
 }
 
 type parkingRecords struct {
-	Records []*parkRecords `json:"records"`
+	Records []*struct {
+		ParkID               int     `json:"Park ID"`
+		ParkADI              string  `json:"Park Adi"`
+		LokasyonID           int     `json:"Lokasyon ID"`
+		LokasyonKodu         int     `json:"LokasyonKodu"`
+		LokasyonAdi          string  `json:"Lokasyon Adi"`
+		ParkTipiID           int     `json:"Park Tipi ID"`
+		ParkTipi             string  `json:"YOL ÜSTÜ"`
+		ParkKapasitesi       int     `json:"Park Kapasitesi"`
+		CalismaSaatleri      string  `json:"Calisma Saatleri"`
+		BolgeID              int     `json:"Bolge ID"`
+		Bolge                string  `json:"Avrupa"`
+		AltBolgeID           int     `json:"Alt Bolge ID"`
+		AltBolge             string  `json:"Alt Bolge"`
+		IlceID               int     `json:"Ilce ID"`
+		Ilce                 string  `json:"Ilce"`
+		Adres                string  `json:"Adres"`
+		EnlemBoylam          string  `json:"Enlem/Boylam"`
+		PolygonVerisi        string  `json:"Polygon Verisi"`
+		Boylam               float64 `json:"Boylam"`
+		Enlem                float64 `json:"Enlem"`
+		AylikAbonelikUcreti  int     `json:"Aylik Abonelik Ucreti"`
+		UcretsizParkSuresi   int     `json:"Ucretsiz Parklanma Suresi (dakika)"`
+		Tarifesi             string  `json:"Tarifesi"`
+		ParkEtDevamEtNoktasi int     `json:"Park Et Devam Et Noktasi"`
+	} `json:"records"`
 }
 
-type parkRecords struct {
-	ParkID               int     `json:"Park ID"`
-	ParkADI              string  `json:"Park Adi"`
-	LokasyonID           int     `json:"Lokasyon ID"`
-	LokasyonKodu         int     `json:"LokasyonKodu"`
-	LokasyonAdi          string  `json:"Lokasyon Adi"`
-	ParkTipiID           int     `json:"Park Tipi ID"`
-	ParkTipi             string  `json:"YOL ÜSTÜ"`
-	ParkKapasitesi       int     `json:"Park Kapasitesi"`
-	CalismaSaatleri      string  `json:"Calisma Saatleri"`
-	BolgeID              int     `json:"Bolge ID"`
-	Bolge                string  `json:"Avrupa"`
-	AltBolgeID           int     `json:"Alt Bolge ID"`
-	AltBolge             string  `json:"Alt Bolge"`
-	IlceID               int     `json:"Ilce ID"`
-	Ilce                 string  `json:"Ilce"`
-	Adres                string  `json:"Adres"`
-	EnlemBoylam          string  `json:"Enlem/Boylam"`
-	PolygonVerisi        string  `json:"Polygon Verisi"`
-	Boylam               float64 `json:"Boylam"`
-	Enlem                float64 `json:"Enlem"`
-	AylikAbonelikUcreti  int     `json:"Aylik Abonelik Ucreti"`
-	UcretsizParkSuresi   int     `json:"Ucretsiz Parklanma Suresi (dakika)"`
-	Tarifesi             string  `json:"Tarifesi"`
-	ParkEtDevamEtNoktasi int     `json:"Park Et Devam Et Noktasi"`
+// MunicipalityPopulation2019 contains the data about the population
+// based on municipality's on Istanbul in 2019
+// https://data.ibb.gov.tr/en/dataset/belediye-nufuslari-veri-seti
+type MunicipalityPopulation2019 struct {
+	municipalityPopulation2019Records `json:"result"`
+}
+
+type municipalityPopulation2019Records struct {
+	Records []*struct {
+		Belediye string `json:"Belediyeler"`
+		Nufus    int    `json:"2019 yili nufuslari"`
+	} `json:"records"`
 }
