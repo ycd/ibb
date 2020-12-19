@@ -18,8 +18,8 @@ const (
 	// https://data.ibb.gov.tr/en/dataset/rayli-sistemler-gunluk-aylik-yillik-hat-bazli-sefer-sayilari
 	RailSystemsTimeline = "e20b32f7-c346-4803-8c0e-837f149c7fa2"
 
-	// IsparkParkingLots information about ISPARK Parking Lots
-	// (Park ID, Park Name, Location ID, Location Code, Location Name, Park Type ID, Park Type, Park Capacity,
+	// IsparkParkingLots contains information about ISPARK Parking Lots
+	// (Park ID, Park Name, Location2 ID, Location Code, Location Name, Park Type ID, Park Type, Park Capacity,
 	// Hours of Operation, Region ID, Region, Sub Area ID, Sub Area, District ID, District, Address,
 	// Latitude / Longitude, Polygon Data, Latitude, Longitude, Monthly Subscription Fee, Free Parking Time,
 	// Timetable, Park Continue Point).
