@@ -117,3 +117,17 @@ type years struct {
 	Y2020 int `json:"2020,omitempty"`
 	Y2021 int `json:"2021,omitempty"`
 }
+
+// IGDASSubscribers contains IGDAS (gas company) subscription numbers
+// in the 39 districts of Istanbul.
+// https://data.ibb.gov.tr/en/dataset/ilcelere-gore-abone-sayilari
+type IGDASSubscribers struct {
+	igdasSubscriberRecords `json:"result"`
+}
+
+type igdasSubscriberRecords struct {
+	Records []*struct {
+		Ilce        string `json:"ILCE"`
+		AboneSayisi int    `json:"ABONE SAYI"`
+	} `json:"records"`
+}
