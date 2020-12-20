@@ -20,7 +20,7 @@ import (
 ## Available methods
 
 ```go
-IETTTicketPrices(ctx context.Context, year int) (*ibb.TicketPrices, error)
+func (c *Client) IETTTicketPrices(ctx context.Context, year int) (*ibb.TicketPrices, error)
 ```
 
 IETTTicketPrices Contains the price information of the public transportation tickets used in Istanbul.
@@ -31,7 +31,7 @@ IETTTicketPrices Contains the price information of the public transportation tic
 
 ---
 ```go
-RailSystemsTimeline(ctx context.Context) (*ibb.RailSystemsTimeline, error) 
+func (c *Client) RailSystemsTimeline(ctx context.Context) (*ibb.RailSystemsTimeline, error) 
 ```
 
 RailSystemsTimeline contains data on the number of voyages of the rail system lines in Istanbul. The data are in daily, monthly and yearly formats. 
@@ -52,7 +52,7 @@ RailSystemsTimeline contains data on the number of voyages of the rail system li
 * TF2Hatti
 ---
 ```go
-DailyMaximumJourneyByRailSystem(ctx context.Context) (*ibb.RailSystemsDailyMaximumJourneys, error)
+func (c *Client) DailyMaximumJourneyByRailSystem(ctx context.Context) (*ibb.RailSystemsDailyMaximumJourneys, error)
 ```
 DailyMaximumJourneyByRailSystem contains the maximum number of daily trips using rail system lines in Istanbul. Metro Istanbul Inc. and MARMARAY maximum line-based daily trips are included.
 
@@ -62,7 +62,7 @@ DailyMaximumJourneyByRailSystem contains the maximum number of daily trips using
 
 ---
 ```go
-IsparkParkingLots(ctx context.Context) (*ibb.ParkingLots, error)
+func (c *Client) IsparkParkingLots(ctx context.Context) (*ibb.ParkingLots, error)
 ```
 
 IsparkParkingLots contains information about:
@@ -95,7 +95,7 @@ IsparkParkingLots contains information about:
 
 ---
 ```go
-MunicipalityPopulation2019(ctx context.Context) (*ibb.MunicipalityPopulation2019, error)
+func (c *Client) MunicipalityPopulation2019(ctx context.Context) (*ibb.MunicipalityPopulation2019, error)
 ```
 
 MunicipalityPopulation2019 contains the data about the population based on municipality's on Istanbul in 2019.
@@ -105,20 +105,28 @@ MunicipalityPopulation2019 contains the data about the population based on munic
 
 ---
 ```go
-WasteAmounts(ctx context.Context) (*ibb.WasteAmount, error)
+func (c *Client) WasteAmounts(ctx context.Context) (*ibb.WasteAmount, error)
 ```
 
 WasteAmounts contains information on the amount of waste by district, year and type of waste (solid waste collection activities, Medical waste collection activities, mechanical sweeping activities to prevent pollution in the main arteries and squares) 
 
 ---
 ```go
-IGDASSubscribers(ctx context.Context) (*ibb.IGDASSubscribers, error)
+func (c *Client) IGDASSubscribers(ctx context.Context) (*ibb.IGDASSubscribers, error)
 ```
 
 IGDASSubscribers contains IGDAS (gas company) subscription numbers in the 39 districts of Istanbul. 
 
 * Ilce       
 * AboneSayisi
+
+---
+```go
+func (c *Client) DamOccupancyRates(ctx context.Context) (*DamOccupancy, error)
+```
+
+DamOccupancyRates contains information on the daily and annual changes of the occupancy rates of dams in Istanbul. 
+
 
 
 ## Example
