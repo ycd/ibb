@@ -45,7 +45,7 @@ type parkingRecords struct {
 	} `json:"records"`
 }
 
-// IsparkParkingLots information about ISPARK Parking Lots
+// IsparkParkingLots contains information about
 // (Park ID, Park Name, Location2 ID, Location Code, Location Name, Park Type ID, Park Type, Park Capacity,
 // Hours of Operation, Region ID, Region, Sub Area ID, Sub Area, District ID, District, Address,
 // Latitude / Longitude, Polygon Data, Latitude, Longitude, Monthly Subscription Fee, Free Parking Time,

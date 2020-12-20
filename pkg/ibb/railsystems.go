@@ -7,8 +7,9 @@ import (
 	"github.com/ycd/ibb/pkg/resources"
 )
 
-// RailSystemsTimeline is a holds the data about rail systems in Istanbul
-// The routes the year and the period etc.
+// RailSystemsTimeline contains data on the number of voyages of the
+// rail system lines in Istanbul. The data are in daily, monthly and yearly formats.
+// https://data.ibb.gov.tr/en/dataset/rayli-sistemler-gunluk-aylik-yillik-hat-bazli-sefer-sayilari
 type RailSystemsTimeline struct {
 	railSystemsRecords `json:"result"`
 }
