@@ -41,4 +41,12 @@ const (
 	// based on municipality's on Istanbul in 2019
 	// https://data.ibb.gov.tr/en/dataset/belediye-nufuslari-veri-seti
 	MunicipalityPopulation2019 = "c6c9b289-2824-41b3-ab3d-4fd655ed4e24"
+
+	// IETTTicketPrices2020 Contains the price information of the
+	// public transportation tickets used in Istanbul.
+	IETTTicketPrices2020 = "31c7b38f-c952-43cf-98dd-b69c44079764"
+
+	// IETTTicketPrices2019 Contains the price information of the
+	// public transportation tickets used in Istanbul.
+	IETTTicketPrices2019 = "8e132527-2eb7-4d68-a549-d224d233ab16"
 )
