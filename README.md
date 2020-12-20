@@ -29,11 +29,10 @@ IETTTicketPrices Contains the price information of the public transportation tic
 * Name 
 * Pricing 
 
-
+---
 ```go
 RailSystemsTimeline(ctx context.Context) (*ibb.RailSystemsTimeline, error) 
 ```
-func(ctx context.Context) (*ibb.RailSystemsTimeline, error)
 
 RailSystemsTimeline contains data on the number of voyages of the rail system lines in Istanbul. The data are in daily, monthly and yearly formats. 
 
@@ -51,7 +50,7 @@ RailSystemsTimeline contains data on the number of voyages of the rail system li
 * F1Hatti 
 * TF1Hatti
 * TF2Hatti
-
+---
 ```go
 DailyMaximumJourneyByRailSystem(ctx context.Context) (*ibb.RailSystemsDailyMaximumJourneys, error)
 ```
@@ -61,7 +60,7 @@ DailyMaximumJourneyByRailSystem contains the maximum number of daily trips using
 * Year from 2004-2021
 * IsletmeTuru 
 
-
+---
 ```go
 IsparkParkingLots(ctx context.Context) (*ibb.ParkingLots, error)
 ```
@@ -94,7 +93,7 @@ IsparkParkingLots contains information about:
 * Park Continue Point
 
 
-
+---
 ```go
 MunicipalityPopulation2019(ctx context.Context) (*ibb.MunicipalityPopulation2019, error)
 ```
@@ -104,13 +103,14 @@ MunicipalityPopulation2019 contains the data about the population based on munic
 * Municipality
 * Population
 
-
+---
 ```go
 WasteAmounts(ctx context.Context) (*ibb.WasteAmount, error)
 ```
 
 WasteAmounts contains information on the amount of waste by district, year and type of waste (solid waste collection activities, Medical waste collection activities, mechanical sweeping activities to prevent pollution in the main arteries and squares) 
 
+---
 ```go
 IGDASSubscribers(ctx context.Context) (*ibb.IGDASSubscribers, error)
 ```
