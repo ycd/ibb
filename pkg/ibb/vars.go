@@ -1,8 +1,8 @@
 package ibb
 
-// RailSystems is a holds the data about rail systems in Istanbul
+// RailSystemsTimeline is a holds the data about rail systems in Istanbul
 // The routes the year and the period etc.
-type RailSystems struct {
+type RailSystemsTimeline struct {
 	railSystemsRecords `json:"result"`
 }
 
@@ -118,6 +118,27 @@ type years struct {
 	Y2021 int `json:"2021,omitempty"`
 }
 
+type yearsWithDot struct {
+	Y2004 int `json:"2004.0,omitempty"`
+	Y2005 int `json:"2005.0,omitempty"`
+	Y2006 int `json:"2006.0,omitempty"`
+	Y2007 int `json:"2007.0,omitempty"`
+	Y2008 int `json:"2008.0,omitempty"`
+	Y2009 int `json:"2009.0,omitempty"`
+	Y2010 int `json:"2010.0,omitempty"`
+	Y2011 int `json:"2011.0,omitempty"`
+	Y2012 int `json:"2012.0,omitempty"`
+	Y2013 int `json:"2013.0,omitempty"`
+	Y2014 int `json:"2014.0,omitempty"`
+	Y2015 int `json:"2015.0,omitempty"`
+	Y2016 int `json:"2016.0,omitempty"`
+	Y2017 int `json:"2017.0,omitempty"`
+	Y2018 int `json:"2018.0,omitempty"`
+	Y2019 int `json:"2019.0,omitempty"`
+	Y2020 int `json:"2020.0,omitempty"`
+	Y2021 int `json:"2021.0,omitempty"`
+}
+
 // IGDASSubscribers contains IGDAS (gas company) subscription numbers
 // in the 39 districts of Istanbul.
 // https://data.ibb.gov.tr/en/dataset/ilcelere-gore-abone-sayilari
@@ -129,5 +150,18 @@ type igdasSubscriberRecords struct {
 	Records []*struct {
 		Ilce        string `json:"ILCE"`
 		AboneSayisi int    `json:"ABONE SAYI"`
+	} `json:"records"`
+}
+
+// RailSystemsDailyMaximumJourneys contains the maximum number of daily trips using rail system lines in Istanbul.
+type RailSystemsDailyMaximumJourneys struct {
+	railSytemsDMJourneyRecords `json:"result"`
+}
+
+type railSytemsDMJourneyRecords struct {
+	Records []*struct {
+		HatAdi string `json:"Hat Adi"`
+		yearsWithDot
+		IsletmeTuru string `json:"Isletme Turu"`
 	} `json:"records"`
 }
