@@ -4,6 +4,9 @@
 package resources
 
 const (
+	// Limit100000 is a query parameter for getting
+	// all data through the pagination.
+	Limit100000 = "&limit=100000"
 
 	// BaseURL is a base url for accessing IBB data through the API
 	BaseURL = "https://data.ibb.gov.tr/en/api/3/action/datastore_search?resource_id="
@@ -49,4 +52,9 @@ const (
 	// IETTTicketPrices2019 Contains the price information of the
 	// public transportation tickets used in Istanbul.
 	IETTTicketPrices2019 = "8e132527-2eb7-4d68-a549-d224d233ab16"
+
+	// DamOccupancyRates contains information on the daily and annual
+	// changes of the occupancy rates of dams in Istanbul.
+	// https://data.ibb.gov.tr/en/dataset/istanbul-baraj-doluluk-oranlari-verisi
+	DamOccupancyRates = "b68cbdb0-9bf5-474c-91c4-9256c07c4bdf&limit"
 )
