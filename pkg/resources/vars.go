@@ -56,5 +56,5 @@ const (
 	// DamOccupancyRates contains information on the daily and annual
 	// changes of the occupancy rates of dams in Istanbul.
 	// https://data.ibb.gov.tr/en/dataset/istanbul-baraj-doluluk-oranlari-verisi
-	DamOccupancyRates = "b68cbdb0-9bf5-474c-91c4-9256c07c4bdf&limit"
+	DamOccupancyRates = "b68cbdb0-9bf5-474c-91c4-9256c07c4bdf"
 )
